@@ -98,11 +98,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         
         if ((carrier?.isoCountryCode) != nil) {
             
-            let url = URL(string: "tel:\(appointment.custPhone)")
+            let url = URL(string: "tel://\(appointment.custPhone)")
             
             if UIApplication.shared.canOpenURL(url!){
                 
-                UIApplication.shared.canOpenURL(url!)
+                UIApplication.shared.openURL(url!)
                 
             }else{
                 
